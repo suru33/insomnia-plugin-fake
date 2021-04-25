@@ -1,5 +1,9 @@
 const faker = require('faker');
 
+const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+const rand = (list) => list[Math.floor((Math.random() * list.length))];
+
 const padLeft = (num, targetLength) => num.toString().padStart(targetLength, 0);
 
 const dateFmt = (o, d) => o.getUTCFullYear() + d
@@ -14,6 +18,14 @@ const dateTimeFmt = (o) => o.getUTCFullYear() + '-'
   + padLeft(o.getUTCSeconds(), 2) + '.'
   + padLeft(o.getUTCMilliseconds(), 3) + 'Z';
 
+
+const phoneNumberLocal = () => rand(digits) + rand(digits) + rand(digits)
+  + '-' + rand(digits) + rand(digits) + rand(digits)
+  + '-' + rand(digits) + rand(digits) + rand(digits);
+
+const phoneNumber = () => '+' + rand(digits) + rand(digits) + ' ' + phoneNumberLocal();
+
+const cleanStr = (s) => JSON.stringify(s).slice(1, -1);
 
 module.exports.templateTags = [
   {
@@ -63,12 +75,10 @@ module.exports.templateTags = [
           { displayName: 'UUID', value: 'datatype.uuid' },
           { displayName: 'Boolean', value: 'datatype.boolean' },
           { displayName: 'Hexa Decimal', value: 'datatype.hexaDecimal' },
-          { displayName: 'JSON', value: 'datatype.json' },
 
           // date
           { displayName: 'Month', value: 'date.month' }, // different name
           { displayName: 'Weekday', value: 'date.weekday' },
-
           // custom
           // time
           { displayName: 'Unix Time', value: 'date.unixTime' },
@@ -89,11 +99,11 @@ module.exports.templateTags = [
 
 
           // finance
-          { displayName: 'Account', value: 'finance.account' },
-          { displayName: 'Account Name', value: 'finance.accountName' },
-          { displayName: 'Routing Number', value: 'finance.routingNumber' },
-          { displayName: 'Amount', value: 'finance.amount' },
-          { displayName: 'Transaction Type', value: 'finance.transactionType' },
+          { displayName: 'Bank Account Number', value: 'finance.account' },
+          { displayName: 'Bank Account Name', value: 'finance.accountName' },
+          { displayName: 'Bank Routing Number', value: 'finance.routingNumber' },
+          { displayName: 'Bank Transaction Amount', value: 'finance.amount' },
+          { displayName: 'Bank Transaction Type', value: 'finance.transactionType' },
           { displayName: 'Currency Code', value: 'finance.currencyCode' },
           { displayName: 'Currency Name', value: 'finance.currencyName' },
           { displayName: 'Currency Symbol', value: 'finance.currencySymbol' },
@@ -107,12 +117,11 @@ module.exports.templateTags = [
           { displayName: 'Bank Transaction Desc', value: 'finance.transactionDescription' },
 
           // image (name changed)
-          { displayName: 'Random Image', value: 'image.image' },
-          { displayName: 'Avatar', value: 'image.avatar' },
+          { displayName: 'Random Image URL', value: 'image.image' },
+          { displayName: 'Avatar URL', value: 'image.avatar' },
           { displayName: 'Image URL', value: 'image.imageUrl' },
 
           // internet
-          { displayName: 'Avatar', value: 'internet.avatar' },
           { displayName: 'Email', value: 'internet.email' },
           { displayName: 'Example Email', value: 'internet.exampleEmail' },
           { displayName: 'User Name', value: 'internet.userName' },
@@ -124,27 +133,27 @@ module.exports.templateTags = [
           { displayName: 'Domain Word', value: 'internet.domainWord' },
           { displayName: 'IP', value: 'internet.ip' },
           { displayName: 'IPv6', value: 'internet.ipv6' },
-          { displayName: 'Port', value: 'internet.port' },
+          { displayName: 'Application Port', value: 'internet.port' },
           { displayName: 'User Agent', value: 'internet.userAgent' },
           { displayName: 'Mac Address', value: 'internet.mac' },
           { displayName: 'Password', value: 'internet.password' },
 
           // lorem
-          { displayName: 'Word', value: 'lorem.word' },
-          { displayName: 'Words', value: 'lorem.words' },
-          { displayName: 'Sentence', value: 'lorem.sentence' },
-          { displayName: 'Slug', value: 'lorem.slug' },
-          { displayName: 'Sentences', value: 'lorem.sentences' },
-          { displayName: 'Paragraph', value: 'lorem.paragraph' },
-          { displayName: 'Paragraphs', value: 'lorem.paragraphs' },
-          { displayName: 'Text', value: 'lorem.text' },
-          { displayName: 'Lines', value: 'lorem.lines' },
+          { displayName: 'Lorem Word', value: 'lorem.word' },
+          { displayName: 'Lorem Words', value: 'lorem.words' },
+          { displayName: 'Lorem Sentence', value: 'lorem.sentence' },
+          { displayName: 'Lorem Slug', value: 'lorem.slug' },
+          { displayName: 'Lorem Sentences', value: 'lorem.sentences' },
+          { displayName: 'Lorem Paragraph', value: 'lorem.paragraph' },
+          { displayName: 'Lorem Paragraphs', value: 'lorem.paragraphs' },
+          { displayName: 'Lorem Text', value: 'lorem.text' },
+          { displayName: 'Lorem Lines', value: 'lorem.lines' },
 
           // name
           { displayName: 'First Name', value: 'name.firstName' },
           { displayName: 'Last Name', value: 'name.lastName' },
           { displayName: 'Middle Name', value: 'name.middleName' },
-          { displayName: 'Name', value: 'name.findName' },
+          { displayName: 'Full Name', value: 'name.findName' },
           { displayName: 'Job Title', value: 'name.jobTitle' },
           { displayName: 'Gender', value: 'name.gender' },
           { displayName: 'Prefix', value: 'name.prefix' },
@@ -156,30 +165,27 @@ module.exports.templateTags = [
 
           // phone
           { displayName: 'Phone Number', value: 'phone.phoneNumber' },
-          { displayName: 'Phone Number Format', value: 'phone.phoneNumberFormat' },
-          { displayName: 'Phone Formats', value: 'phone.phoneFormats' },
+          { displayName: 'Phone Number Local', value: 'phone.phoneNumber.local' },
 
           // system
-          { displayName: 'File Name', value: 'system.fileName' },
-          { displayName: 'Common File Name', value: 'system.commonFileName' },
+          { displayName: 'File Name', value: 'system.commonFileName' },
           { displayName: 'Mime Type', value: 'system.mimeType' },
-          { displayName: 'Common File Type', value: 'system.commonFileType' },
-          { displayName: 'Common File Ext', value: 'system.commonFileExt' },
+          { displayName: 'File Type', value: 'system.commonFileType' },
+          { displayName: 'File Ext', value: 'system.commonFileExt' },
           { displayName: 'File Type', value: 'system.fileType' },
-          { displayName: 'File Ext', value: 'system.fileExt' },
           { displayName: 'Directory Path', value: 'system.directoryPath' },
           { displayName: 'File Path', value: 'system.filePath' },
           { displayName: 'Semver', value: 'system.semver' },
 
 
           // vehicle
-          { displayName: 'Vehicle Name', value: 'vehicle.vehicle' },
-          { displayName: 'Vehicle Color', value: 'vehicle.color' },
-          { displayName: 'Vehicle Manufacturer', value: 'vehicle.manufacturer' },
-          { displayName: 'Vehicle Model', value: 'vehicle.model' },
-          { displayName: 'Vehicle Type', value: 'vehicle.type' },
-          { displayName: 'Vehicle Fuel', value: 'vehicle.fuel' },
-          { displayName: 'Vehicle VIN', value: 'vehicle.vin' }
+          { displayName: 'Car Name', value: 'vehicle.vehicle' },
+          { displayName: 'Car Color', value: 'vehicle.color' },
+          { displayName: 'Car Manufacturer', value: 'vehicle.manufacturer' },
+          { displayName: 'Car Model', value: 'vehicle.model' },
+          { displayName: 'Car Type', value: 'vehicle.type' },
+          { displayName: 'Car Fuel', value: 'vehicle.fuel' },
+          { displayName: 'Car VIN', value: 'vehicle.vin' }
 
         ],
       },
@@ -220,18 +226,17 @@ module.exports.templateTags = [
         // datatype
         case 'datatype.number': return faker.datatype.number();
         case 'datatype.float': return faker.datatype.float();
-        case 'datatype.string': return faker.datatype.string();
+        case 'datatype.string': return cleanStr(faker.datatype.string());
         case 'datatype.uuid': return faker.datatype.uuid();
         case 'datatype.boolean': return faker.datatype.boolean();
         case 'datatype.hexaDecimal': return faker.datatype.hexaDecimal();
-        case 'datatype.json': return faker.datatype.json();
 
         // date
         case 'date.month': return faker.date.month();
         case 'date.weekday': return faker.date.weekday();
         // time
-        case 'date.unixTime': return faker.datatype.datetime().getTime() / 1000;
-        case 'date.unixTime.now': return new Date().getTime() / 1000;
+        case 'date.unixTime': return Math.floor(faker.datatype.datetime().getTime() / 1000);
+        case 'date.unixTime.now': return Math.floor(new Date().getTime() / 1000);
         case 'date.timeMill': return faker.datatype.datetime().getTime();
         case 'date.timeMill.now': return new Date().getTime();
         // date
@@ -245,7 +250,6 @@ module.exports.templateTags = [
         // code
         case 'date.month.code': return faker.date.month().substring(0, 3);
         case 'date.weekday.code': return faker.date.weekday().substring(0, 3);
-
 
         // finance
         case 'finance.account': return faker.finance.account();
@@ -274,7 +278,7 @@ module.exports.templateTags = [
         case 'internet.avatar': return faker.internet.avatar();
         case 'internet.email': return faker.internet.email().toLowerCase();
         case 'internet.exampleEmail': return faker.internet.exampleEmail().toLowerCase();
-        case 'internet.userName': return faker.internet.userName();
+        case 'internet.userName': return faker.internet.userName().toLowerCase();
         case 'internet.protocol': return faker.internet.protocol();
         case 'internet.httpMethod': return faker.internet.httpMethod();
         case 'internet.url': return faker.internet.url();
@@ -289,15 +293,15 @@ module.exports.templateTags = [
         case 'internet.password': return faker.internet.password();
 
         // lorem
-        case 'lorem.word': return faker.lorem.word();
-        case 'lorem.words': return faker.lorem.words();
-        case 'lorem.sentence': return faker.lorem.sentence();
-        case 'lorem.slug': return faker.lorem.slug();
-        case 'lorem.sentences': return faker.lorem.sentences();
-        case 'lorem.paragraph': return faker.lorem.paragraph();
-        case 'lorem.paragraphs': return faker.lorem.paragraphs();
-        case 'lorem.text': return faker.lorem.text();
-        case 'lorem.lines': return faker.lorem.lines();
+        case 'lorem.word': return cleanStr(faker.lorem.word());
+        case 'lorem.words': return cleanStr(faker.lorem.words());
+        case 'lorem.sentence': return cleanStr(faker.lorem.sentence());
+        case 'lorem.slug': return cleanStr(faker.lorem.slug());
+        case 'lorem.sentences': return cleanStr(faker.lorem.sentences());
+        case 'lorem.paragraph': return cleanStr(faker.lorem.paragraph());
+        case 'lorem.paragraphs': return cleanStr(faker.lorem.paragraphs());
+        case 'lorem.text': return cleanStr(faker.lorem.text());
+        case 'lorem.lines': return cleanStr(faker.lorem.lines());
 
         //name
         case 'name.firstName': return faker.name.firstName();
@@ -314,18 +318,15 @@ module.exports.templateTags = [
         case 'name.jobType': return faker.name.jobType();
 
         // phone
-        case 'phone.phoneNumber': return faker.phone.phoneNumber();
-        case 'phone.phoneNumberFormat': return faker.phone.phoneNumberFormat();
-        case 'phone.phoneFormats': return faker.phone.phoneFormats();
+        case 'phone.phoneNumber': return phoneNumber();
+        case 'phone.phoneNumber.local': return phoneNumberLocal();
 
         // system
-        case 'system.fileName': return faker.system.fileName();
         case 'system.commonFileName': return faker.system.commonFileName();
         case 'system.mimeType': return faker.system.mimeType();
         case 'system.commonFileType': return faker.system.commonFileType();
         case 'system.commonFileExt': return faker.system.commonFileExt();
         case 'system.fileType': return faker.system.fileType();
-        case 'system.fileExt': return faker.system.fileExt();
         case 'system.directoryPath': return faker.system.directoryPath();
         case 'system.filePath': return faker.system.filePath();
         case 'system.semver': return faker.system.semver();
@@ -339,8 +340,7 @@ module.exports.templateTags = [
         case 'vehicle.fuel': return faker.vehicle.fuel();
         case 'vehicle.vin': return faker.vehicle.vin();
 
-        default:
-          throw new Error(`Invalid "${fakeProp}"`);
+        default: throw new Error(`Invalid "${fakeProp}"`);
       }
     },
   },
