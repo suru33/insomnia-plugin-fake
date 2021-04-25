@@ -9,6 +9,8 @@ Fake data generation using https://github.com/marak/Faker.js/
 
 ## How to install
 
+> Goto: `Insomnia Preferences -> Plugins`
+
 ### npm package name: `insomnia-plugin-fake`
 ![Step 1](img/img1.png)
 
