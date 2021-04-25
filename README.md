@@ -1,9 +1,12 @@
 # insomnia-plugin-fake
 
-
 Insomnia plugin to create fake data
 
 Fake data generation using https://github.com/marak/Faker.js/
+
+Install insomnia rest client from https://insomnia.rest/download
+
+For Mac `brew install --cask insomnia`
 
 ---
 
@@ -11,13 +14,13 @@ Fake data generation using https://github.com/marak/Faker.js/
 
 > Goto: `Insomnia Preferences -> Plugins`
 
-### npm package name: `insomnia-plugin-fake`
+#### npm package name: `insomnia-plugin-fake`
 ![Step 1](img/img1.png)
 
-### Enable the plugin
+#### Enable the plugin
 ![Step 2](img/img2.png)
 
-### `Ctrl+Space` for auto-completion in the request body
+#### `Ctrl+Space` for auto-completion in the request body
 
 ![Step 3](img/img3.png)
 
@@ -35,7 +38,7 @@ Fake data generation using https://github.com/marak/Faker.js/
 }
 ```
 
-### Available keys are
+#### Available keys are
 
 ```java
 // Address
