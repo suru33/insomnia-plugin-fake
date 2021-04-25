@@ -38,10 +38,10 @@ For Mac `brew install --cask insomnia`
 }
 ```
 
-#### Available keys are
+#### Available keys are:
 
-```java
-// Address
+Address
+```
 Zip Code
 City
 City Name
@@ -55,8 +55,10 @@ State
 Latitude
 Longitude
 Time Zone
+```
 
-// Commerce
+Commerce
+```
 Department
 Product Name
 Price
@@ -64,23 +66,31 @@ Adjective
 Product Material
 Product
 Product Description
+```
 
-// Color
+Color
+```
 Color Code
 Color Name
+```
 
-// Company
+Company
+```
 Company Name
+```
 
-// Datatype
+Datatype
+```
 Int
 Float
 String
 UUID
 Boolean
 Hexa Decimal
+```
 
-// Date and Time
+Date and Time
+```
 Month
 Weekday
 Unix Time
@@ -95,8 +105,10 @@ DateTime ISO-8601
 DateTime ISO-8601 (now)
 Month Code
 Weekday Code
+```
 
-// Finance
+Finance
+```
 Bank Account Number
 Bank Account Name
 Bank Routing Number
@@ -113,13 +125,17 @@ Ethereum Address
 IBAN
 BIC
 Bank Transaction Desc
+```
 
-// Image URLs
+Image URLs
+```
 Random Image URL
 Avatar URL
 Image URL
+```
 
-// Internet
+Internet
+```
 Email
 Example Email
 User Name
@@ -135,8 +151,10 @@ Application Port
 User Agent
 Mac Address
 Password
+```
 
-// Lorem
+Lorem
+```
 Lorem Word
 Lorem Words
 Lorem Sentence
@@ -146,8 +164,10 @@ Lorem Paragraph
 Lorem Paragraphs
 Lorem Text
 Lorem Lines
+```
 
-// Name
+Name
+```
 First Name
 Last Name
 Middle Name
@@ -160,12 +180,16 @@ Title
 Job Desc
 Job Area
 Job Type
+```
 
-// Phone
+Phone
+```
 Phone Number
 Phone Number Local
+```
 
-// Developer
+Developer
+```
 File Name
 Mime Type
 File Type
@@ -174,9 +198,10 @@ File Type
 Directory Path
 File Path
 Semver
+```
 
-
-// Car
+Car
+```
 Car Name
 Car Color
 Car Manufacturer
