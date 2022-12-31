@@ -1,16 +1,16 @@
 {
   "name": "insomnia-plugin-fake",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
   "insomnia": {
     "name": "fake",
-    "description": "Fake data using faker.js",
+    "description": "Fake data using fakerjs.dev",
     "publisher": {
       "name": "SuRu <33urus@gmail.com>"
     }
   },
   "main": "main.js",
   "dependencies": {
-    "faker": "^5.5.3"
+    "@faker-js/faker": "^7.6.0"
   }
 }
