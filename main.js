@@ -12,6 +12,7 @@ const { internet } = require("./lib/internet");
 const { lorem } = require("./lib/lorem");
 const { music } = require("./lib/music");
 const { name } = require("./lib/name");
+const { phoneIMEI, phoneNumber } = require("./lib/phone");
 const { science } = require("./lib/science");
 const { vehicle } = require("./lib/vehicle");
 const { word } = require("./lib/word");
@@ -39,6 +40,8 @@ module.exports.templateTags = [
   lorem,
   music,
   name,
+  phoneIMEI,
+  phoneNumber,
   science,
   vehicle,
   word
