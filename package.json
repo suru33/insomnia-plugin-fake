@@ -10,7 +10,14 @@
     }
   },
   "main": "main.js",
+  "scripts": {
+    "lint:check": "eslint --ext .js .",
+    "lint:fix": "eslint --fix --ext js ."
+  },
   "dependencies": {
     "@faker-js/faker": "^7.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
   }
 }
