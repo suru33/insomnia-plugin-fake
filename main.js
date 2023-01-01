@@ -4,7 +4,9 @@ const { color } = require("./lib/colors");
 const { commerce } = require("./lib/commerce");
 const { company } = require("./lib/company");
 const { computer } = require("./lib/computer");
+const { database } = require("./lib/database");
 const { datatypeNumber, datatypeBoolean, datatypeHexadecimal, datatypeString, datatypeUUID } = require("./lib/datatype");
+const { dateTimeNow, dateTimeWithInDays, dateTimeWithInYears } = require("./lib/datetime");
 const { employment } = require("./lib/employment");
 const { finance, financeAccountNumber, financeIBAN } = require("./lib/finance");
 const { imageURLs } = require("./lib/imageurls");
@@ -26,11 +28,15 @@ module.exports.templateTags = [
   commerce,
   company,
   computer,
+  database,
   datatypeNumber,
   datatypeBoolean,
   datatypeHexadecimal,
   datatypeString,
   datatypeUUID,
+  dateTimeNow,
+  dateTimeWithInDays,
+  dateTimeWithInYears,
   employment,
   finance,
   financeAccountNumber,
