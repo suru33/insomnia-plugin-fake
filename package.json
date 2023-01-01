@@ -15,7 +15,8 @@
     "lint:fix": "eslint --fix --ext js ."
   },
   "dependencies": {
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "dayjs": "^1.11.7"
   },
   "devDependencies": {
     "eslint": "^8.31.0"
