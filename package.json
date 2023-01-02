@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-fake",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": false,
   "insomnia": {
     "name": "fake",
@@ -20,5 +20,22 @@
   },
   "devDependencies": {
     "eslint": "^8.31.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suru33/insomnia-plugin-fake.git"
+  },
+  "keywords": [
+    "insomnia-plugin",
+    "faker-js",
+    "APITesing",
+    "fake-data-generator",
+    "random-data-generator"
+  ],
+  "author": "SuRu <33urus@gmail.com> (https://suru.im/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suru33/insomnia-plugin-fake/issues"
+  },
+  "homepage": "https://github.com/suru33/insomnia-plugin-fake#readme"
 }
