@@ -2,11 +2,12 @@
 
 Insomnia plugin to create fake data
 
-Fake data generation using https://github.com/marak/Faker.js/
-
 Install insomnia rest client from https://insomnia.rest/download
 
 For Mac `brew install --cask insomnia`
+
+- Fake data generation using https://fakerjs.dev/
+- Time formatting using https://day.js.org/
 
 ---
 
@@ -14,199 +15,297 @@ For Mac `brew install --cask insomnia`
 
 > Goto: `Insomnia Preferences -> Plugins`
 
-#### npm package name: `insomnia-plugin-fake`
-![Step 1](img/img1.png)
+### npm package name: `insomnia-plugin-fake`
 
-#### Enable the plugin
-![Step 2](img/img2.png)
+![Step 1](img/image-1.png)
 
-#### `Ctrl+Space` for auto-completion in the request body
+### Enable the plugin
 
-![Step 3](img/img3.png)
+![Step 2](img/image-2.png)
+
+### `Ctrl+Space` for auto-completion in the request body
+
+![Step 3](img/image-3.png)
 
 > Some fake data... Happy testing the APIs 😃
+
 ```json
 {
-  "carName": "Maserati LeBaron",
-  "carColor": "red",
-  "carManufacturer": "Volvo",
-  "carModel": "Aventador",
-  "carType": "Minivan",
-  "carFuel": "Hybrid",
-  "carVin": "FF8SZD81P6UX92654",
-  "ownerName": "Kelley Russel"
+  "array": [
+    "West African Lion",
+    "salmon",
+    "#cc2889",
+    "Asia/Kamchatka",
+    "+358 7 8690 3118",
+    "W",
+    "West",
+    "787.86",
+    "0x8EAB75ADB366CD84F9CCF6A2D2E66BD5BF7D7FEF06ADCBACAF9DB63BBB61EDCF",
+    "2023-01-02T21:03:23.878",
+    "1673045823",
+    "00:FF:AMAM",
+    "03629 Little Ways",
+    "Quia praesentium esse nostrum omnis voluptate."
+  ]
 }
 ```
 
-#### Available keys are:
+### For more tag options Click on any tag
 
-Address
-```
-Zip Code
-City
-City Name
-Street Name
-Street Address
-Secondary Address
-County
-Country Name
-Country Code
-State
-Latitude
-Longitude
-Time Zone
-```
+For example to change the date format
 
-Commerce
-```
-Department
-Product Name
-Price
-Adjective
-Product Material
-Product
-Product Description
-```
+![Step 3](img/image-4.png)
 
-Color
-```
-Color Code
-Color Name
-```
+## Available keys are:
 
-Company
-```
-Company Name
-```
+### Fake Address
 
-Datatype
-```
-Int
-Float
-String
-UUID
-Boolean
-Hexa Decimal
-```
+- Building Number
+- Latitude
+- Longitude
+- Address Line 1
+- Address Line 2
+- Full Address
+- Street Name
 
-Date and Time
-```
-Month
-Weekday
-Unix Time
-Unix Time (now)
-Time (milliseconds)
-Time (now milliseconds)
-Date (yyyy-mm-dd)
-Date (yyyy/mm/dd)
-Date today(yyyy-mm-dd)
-Date today(yyyy/mm/dd)
-DateTime ISO-8601
-DateTime ISO-8601 (now)
-Month Code
-Weekday Code
-```
+### Random Address
 
-Finance
-```
-Bank Account Number
-Bank Account Name
-Bank Routing Number
-Bank Transaction Amount
-Bank Transaction Type
-Currency Code
-Currency Name
-Currency Symbol
-Bitcoin Address
-Litecoin Address
-Credit Card Number
-Credit Card CVV
-Ethereum Address
-IBAN
-BIC
-Bank Transaction Desc
-```
+- Cardinal Direction
+- City Name
+- Country Name
+- Country Code ISO-2
+- Country Code ISO-3
+- Direction
+- USA State
 
-Image URLs
-```
-Random Image URL
-Avatar URL
-Image URL
-```
+### Random Address Time Zone
 
-Internet
-```
-Email
-Example Email
-User Name
-Protocol
-HTTP Method
-URL
-Domain Name
-Domain Suffix
-Domain Word
-IP
-IPv6
-Application Port
-User Agent
-Mac Address
-Password
-```
+- Africa
+- Antarctica
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 
-Lorem
-```
-Lorem Word
-Lorem Words
-Lorem Sentence
-Lorem Slug
-Lorem Sentences
-Lorem Paragraph
-Lorem Paragraphs
-Lorem Text
-Lorem Lines
-```
+### Fake Address Zip Code
 
-Name
-```
-First Name
-Last Name
-Middle Name
-Full Name
-Job Title
-Gender
-Prefix
-Suffix
-Title
-Job Desc
-Job Area
-Job Type
-```
+- For all countries with formatting
 
-Phone
-```
-Phone Number
-Phone Number Local
-```
+### Random Animal
 
-Developer
-```
-File Name
-Mime Type
-File Type
-File Ext
-File Type
-Directory Path
-File Path
-Semver
-```
+- Bear
+- Bird
+- Cat
+- Cetacean
+- Cow
+- Crocodile
+- Dog
+- Fish
+- Horse
+- Insect
+- Lion
+- Rabbit
+- Rodent
+- Snake
+- Type
 
-Car
-```
-Car Name
-Car Color
-Car Manufacturer
-Car Model
-Car Type
-Car Fuel
-Car VIN
-```
+### Random Color
+
+- Hex
+- Name
+
+### Random Commerce
+
+- Department
+- Product Short Name
+- Product Description
+- Product Material
+- Product Name
+
+### Fake Company
+
+- Name
+- Suffix
+- Catch Phrase
+- BS
+
+### Random Computer
+
+- Cron
+- Directory Path
+- File Ext
+- File Name
+- File Path
+- File Type
+- Mime Type
+- Semver
+
+### Random Database
+
+- Engine
+- MongoDB Object Id
+- Data Type
+- Column Name
+
+### Random Number
+
+### Random Boolean
+
+### Random Hexadecimal
+
+- Lower
+- Upper
+
+### Random String
+
+- Lower
+- Upper
+- Mixed
+
+### Random UUID
+
+### Date Time Now
+
+### Random Date Time With in Days
+
+- Recent
+- Soon
+
+### Random Date Time With in Years
+
+- Past
+- Future
+
+### Random Employment
+
+- Job Area
+- Job Descriptor
+- Job Title
+- Job Type
+
+### Fake Finance
+
+- Account Name
+- BIC
+- BIC with Branch
+- Bitcoin Address
+- Litecoin Address
+- Credit Card CVV
+- Credit Card Issuer
+- Currency Code
+- Currency Name
+- Currency Symbol
+- Ethereum Address
+- Credit Card PIN 4 Digits
+- Credit Card PIN 6 Digits
+- Routing Number
+- Transaction Description
+- Transaction Type
+
+### Fake Bank Account Number
+
+### Fake IBAN
+
+- All IBAN supported countries with format
+
+### Random Image URLs
+
+- Abstract Art
+- Animals
+- Avatar
+- Business
+- Cats
+- City
+- SVG Data URI
+- Fashion
+- Food
+- Image
+- Nature
+- Nightlife
+- People
+- Sports
+- Technics
+- Transport
+
+### Fake Internet
+
+- Domain Name
+- Email
+- Example Email
+- Mac Address
+- URL
+- User Name
+
+### Random Internet
+
+- Domain Word
+- Emoji
+- Http Method
+- Http Status Code
+- IPv4
+- IPv6
+- Password
+- User Agent
+
+### Random Lorem
+
+- Lines
+- Paragraph
+- Paragraphs
+- Sentence
+- Sentences
+- Slug
+- Text
+- Word
+- Words
+
+### Random Music
+
+- Genre
+- Song Name
+
+### Random Name
+
+- firstName
+- middleName
+- lastName
+- fullName
+- prefix
+- suffix
+- Male
+- Female
+
+### Fake Phone IMEI
+
+### Fake Phone Number
+
+- All countries with formats
+
+### Random Science
+
+- Element
+- Element Symbol
+- Measuring Unit
+- Measuring Unit Symbol
+
+### Fake Vehicle
+
+- Bicycle
+- Fuel
+- Manufacturer
+- Model
+- Type
+- Name
+- VIN (Vehicle Identification Number)
+- VRM (Vehicle Registration Number)
+
+### Random Word
+
+- Adjective
+- Adverb
+- Conjunction
+- Interjection
+- Noun
+- Preposition
+- Verb

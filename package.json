@@ -1,16 +1,24 @@
 {
   "name": "insomnia-plugin-fake",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
   "insomnia": {
     "name": "fake",
-    "description": "Fake data using faker.js",
+    "description": "Fake data for testing APIs",
     "publisher": {
       "name": "SuRu <33urus@gmail.com>"
     }
   },
   "main": "main.js",
+  "scripts": {
+    "lint:check": "eslint --ext .js .",
+    "lint:fix": "eslint --fix --ext js ."
+  },
   "dependencies": {
-    "faker": "^5.5.3"
+    "@faker-js/faker": "^7.6.0",
+    "dayjs": "^1.11.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
   }
 }
