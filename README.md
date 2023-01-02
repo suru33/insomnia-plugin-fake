@@ -17,15 +17,15 @@ For Mac `brew install --cask insomnia`
 
 ### npm package name: `insomnia-plugin-fake`
 
-![Step 1](img/image-1.png)
+![Step 1](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-1.png)
 
 ### Enable the plugin
 
-![Step 2](img/image-2.png)
+![Step 2](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-2.png)
 
 ### `Ctrl+Space` for auto-completion in the request body
 
-![Step 3](img/image-3.png)
+![Step 3](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-3.png)
 
 > Some fake data... Happy testing the APIs 😃
 
@@ -54,7 +54,7 @@ For Mac `brew install --cask insomnia`
 
 For example to change the date format
 
-![Step 3](img/image-4.png)
+![Step 3](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-4.png)
 
 ## Available keys are:
 
