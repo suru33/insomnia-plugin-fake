@@ -17,15 +17,15 @@ For Mac `brew install --cask insomnia`
 
 ### npm package name: `insomnia-plugin-fake`
 
-![Step 1](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-1.png)
+![Step 1](https://raw.githubusercontent.com/suru33/insomnia-plugin-fake/master/img/image-1.png)
 
 ### Enable the plugin
 
-![Step 2](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-2.png)
+![Step 2](https://raw.githubusercontent.com/suru33/insomnia-plugin-fake/master/img/image-2.png)
 
 ### `Ctrl+Space` for auto-completion in the request body
 
-![Step 3](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-3.png)
+![Step 3](https://raw.githubusercontent.com/suru33/insomnia-plugin-fake/master/img/image-3.png)
 
 > Some fake data... Happy testing the APIs 😃
 
