@@ -6,8 +6,11 @@ Install insomnia rest client from https://insomnia.rest/download
 
 For Mac `brew install --cask insomnia`
 
+### Credits
+
 - Fake data generation using https://fakerjs.dev/
-- Time formatting using https://day.js.org/
+- Date/Time formatting using https://day.js.org/
+- [Dice SVG Vector](https://www.svgrepo.com/svg/186569/dice) by [svgrepo](https://www.svgrepo.com/)
 
 ---
 
@@ -54,7 +57,7 @@ For Mac `brew install --cask insomnia`
 
 For example to change the date format
 
-![Step 3](https://github.com/suru33/insomnia-plugin-fake/blob/master/img/image-4.png)
+![Step 3](https://raw.githubusercontent.com/suru33/insomnia-plugin-fake/master/img/image-4.png)
 
 ## Available keys are:
 
